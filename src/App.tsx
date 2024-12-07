@@ -7,9 +7,9 @@ function App() {
     const [ingredients, setIngredients] = useState<string[]>([]);
     const [inputValue, setInputValue] = useState<string>('');
 
-    // Function to handle form submission
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault(); //to prevent reloading the page after every input submission
+
         if (inputValue.trim()) {
             setIngredients([...ingredients, inputValue.trim()]);
             setInputValue(''); // Clear input after submission
@@ -33,9 +33,11 @@ function App() {
                         <input
                             type="text"
                             value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
-                            placeholder="e.g. oregano"
-                            className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                            onChange={(event) =>
+                                setInputValue(event.target.value)
+                            }
+                            placeholder="e.g. chicken"
+                            className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                         />
                         {/* Add Ingredient Button */}
                         <button
@@ -49,9 +51,10 @@ function App() {
 
                 {/* Ingredients List */}
                 <div className="max-w-lg mx-auto mt-6 bg-white p-4 rounded-md shadow-md">
-                    <h3 className="text-lg font-semibold mb-2">
+                    <h3 className="text-2xl font-semibold mb-2">
                         Ingredients on hand:
                     </h3>
+
                     <ul className="list-disc pl-5 space-y-1">
                         {ingredients.map((ingredient, index) => (
                             <li key={index} className="text-gray-800">
