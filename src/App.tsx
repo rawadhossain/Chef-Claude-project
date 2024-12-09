@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import { Chef } from './icons/chef';
-import { Recipe } from './components/Recipe';
+import { AiRecipe } from './components/AiRecipe';
 import { GetRecipeButton } from './components/getRecipeButton';
 import { DisplayIngredientsList } from './components/IngredientsList';
+import { getRecipeFromMistral } from './ai';
 
 function App() {
     const [ingredients, setIngredients] = useState<string[]>([
@@ -45,10 +46,11 @@ function App() {
         </>
     );
 
-    const [recipeShown, setRecipeShown] = useState(false);
+    const [recipe, setRecipe] = useState<string | undefined>('');
 
-    function toggleRecipe() {
-        setRecipeShown(() => !recipeShown);
+    async function getRecipe() {
+        const recipeMarkdown = await getRecipeFromMistral(ingredients);
+        setRecipe(recipeMarkdown);
     }
 
     return (
@@ -87,10 +89,10 @@ function App() {
 
                 {/* Get Recipe Button */}
                 {ingredients.length > 3 && (
-                    <GetRecipeButton toggleRecipe={toggleRecipe} />
+                    <GetRecipeButton toggleRecipe={getRecipe} />
                 )}
 
-                {recipeShown && <Recipe />}
+                {recipe && <AiRecipe recipe={recipe} />}
             </div>
         </>
     );

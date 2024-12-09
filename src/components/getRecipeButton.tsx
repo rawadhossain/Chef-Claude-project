@@ -1,8 +1,8 @@
-interface GetRecipeButtonProps {
+export function GetRecipeButton({
+    toggleRecipe,
+}: {
     toggleRecipe: () => void;
-}
-
-export function GetRecipeButton({ toggleRecipe }: GetRecipeButtonProps) {
+}) {
     return (
         <div className="max-w-lg mx-auto mt-6 bg-orange-50 p-4 rounded-md shadow-md">
             <p className="text-md font-semibold mb-1">Ready for recipe?</p>
