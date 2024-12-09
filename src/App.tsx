@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Navbar from './components/Navbar';
 import { Chef } from './icons/chef';
 import { AiRecipe } from './components/AiRecipe';
@@ -8,12 +8,15 @@ import { getRecipeFromMistral } from './ai';
 
 function App() {
     const [ingredients, setIngredients] = useState<string[]>([
-        'all the main spices',
-        'pasta',
-        'ground beef',
-        'tomato paste',
+        'chicken',
+        'bread',
+        'mustard sauce',
+        'salad',
+        'bacon',
     ]);
     const [inputValue, setInputValue] = useState<string>('');
+
+    const recipeRef = useRef<HTMLDivElement>(null);
 
     /*
     const handleSubmit = (event: React.FormEvent) => {
@@ -51,6 +54,11 @@ function App() {
     async function getRecipe() {
         const recipeMarkdown = await getRecipeFromMistral(ingredients);
         setRecipe(recipeMarkdown);
+
+        // Scroll to the recipe section when the recipe is ready
+        if (recipeRef.current) {
+            recipeRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
     return (
@@ -91,8 +99,9 @@ function App() {
                 {ingredients.length > 3 && (
                     <GetRecipeButton toggleRecipe={getRecipe} />
                 )}
-
-                {recipe && <AiRecipe recipe={recipe} />}
+                <div ref={recipeRef}>
+                    {recipe && <AiRecipe recipe={recipe} />}
+                </div>
             </div>
         </>
     );
