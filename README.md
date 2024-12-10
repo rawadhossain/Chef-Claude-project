@@ -26,4 +26,4 @@
 
 ## 🖼️ Screenshots
 
----
+## ![homepage](src\assets\screenshot.png)
