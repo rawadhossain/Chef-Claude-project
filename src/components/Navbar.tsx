@@ -1,6 +1,5 @@
 import { ReactElement } from 'react';
 import { Chef } from '../icons/chef';
-import '@fontsource/anton-sc';
 
 interface ChefHeaderProps {
     icon: ReactElement;
