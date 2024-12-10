@@ -1,58 +1,42 @@
-# React + TypeScript + Vite
-![image](https://github.com/user-attachments/assets/fbf77acc-40e2-4ede-8b82-4f69c2bfa18a)
-<br>
-![image](https://github.com/user-attachments/assets/c27ecb60-4f51-46cd-bd3a-505ef12119ff)
+# IngreBot - AI-Powered Recipe Generator
 
+**IngreBot** is an innovative web application designed to help you discover new recipes based on the ingredients you already have at home. Powered by **Mistral AI**, this app suggests personalized recipes by analyzing the ingredients you provide. Whether you're looking to make use of leftovers or create something entirely new, **IngreBot** has got you covered!
 
+---
 
+## 🚀 Features
 
+-   **Ingredient Management**: Add, edit, and manage your ingredients seamlessly.
+-   **AI Recipe Generation**: Generate custom recipe ideas based on your provided ingredients, powered by AI.
+-   **Chef Recommendations**: Get personalized recipe suggestions with clear step-by-step instructions.
+-   **Dynamic Recipe Rendering**: Beautifully formatted recipe details with ingredients and instructions.
+-   **Mobile-Responsive**: A clean and mobile-friendly design, built using **Tailwind CSS**.
+-   **Real-time Interaction**: The app updates in real-time based on user input, making it intuitive and fast.
 
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🛠️ Technologies
 
-Currently, two official plugins are available:
+-   **React** (Frontend Framework)
+-   **TypeScript** (For Static Typing and Improved Developer Experience)
+-   **Tailwind CSS** (For Fast and Efficient Styling)
+-   **Mistral AI** (For Recipe Generation)
+-   **React Markdown** (For Rendering Markdown Content)
+-   **Markdown** (For AI Recipe Content)
+-   **Rehype-raw** (For HTML Rendering Inside Markdown)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 💡 How It Works
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Input Your Ingredients**: Type in the ingredients you have (e.g., chicken, bread, mustard sauce).
+2. **Generate Recipe**: Click the "Get Recipe" button to have **IngreBot** process your ingredients and generate a personalized recipe suggestion.
+3. **View Recipe**: The recipe will include the ingredients, instructions, and some extra tips to guide you in preparing your dish.
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🖼️ Screenshots
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## ⚙️ Getting Started

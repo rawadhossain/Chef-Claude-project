@@ -8,7 +8,7 @@ import { getRecipeFromMistral } from './ai';
 
 function App() {
     const [ingredients, setIngredients] = useState<string[]>([]);
-    const [inputValue, setInputValue] = useState<string>('');
+    const [, setInputValue] = useState<string>('');
 
     const recipeRef = useRef<HTMLDivElement>(null);
 
