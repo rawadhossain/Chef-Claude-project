@@ -7,13 +7,7 @@ import { DisplayIngredientsList } from './components/IngredientsList';
 import { getRecipeFromMistral } from './ai';
 
 function App() {
-    const [ingredients, setIngredients] = useState<string[]>([
-        'chicken',
-        'bread',
-        'mustard sauce',
-        'salad',
-        'bacon',
-    ]);
+    const [ingredients, setIngredients] = useState<string[]>([]);
     const [inputValue, setInputValue] = useState<string>('');
 
     const recipeRef = useRef<HTMLDivElement>(null);
@@ -64,7 +58,7 @@ function App() {
     return (
         <>
             {/* ChefHeader Component */}
-            <Navbar icon={<Chef />} title="Chef Claude" />
+            <Navbar icon={<Chef />} title="IngreBot" />
 
             {/* Main Content */}
             <div className="p-4">
