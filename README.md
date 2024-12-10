@@ -4,6 +4,11 @@
 
 ---
 
+## 🖼️ Screenshots
+
+![screenshot](https://github.com/user-attachments/assets/6b5cfa84-c056-4b98-9f19-3ccfa2ce6734)
+
+---
 ## 🛠️ Technologies
 
 -   **React** (Frontend Framework)
@@ -24,6 +29,4 @@
 
 ---
 
-## 🖼️ Screenshots
 
-## ![homepage](src\assets\screenshot.png)
