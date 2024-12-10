@@ -7,6 +7,8 @@
 ## 🖼️ Screenshots
 
 ![screenshot](https://github.com/user-attachments/assets/6b5cfa84-c056-4b98-9f19-3ccfa2ce6734)
+![Picture1](https://github.com/user-attachments/assets/27ccf908-0160-44e6-b914-38306bdb8434)
+
 
 ---
 ## 🛠️ Technologies
